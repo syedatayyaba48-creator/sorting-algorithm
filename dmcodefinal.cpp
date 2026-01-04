@@ -197,15 +197,15 @@ int main ()
         int arr[100];
         int originalArr[100];
         cout << "Enter the elements of the array: ";
-        for (int i = 0; i < size; i++) 
+        for (int i = 0; i < size; i++)
         {
-            cin >> arr[i];
-            while (arr[i] < 0 || arr[i] > 1000) 
+            while (!(cin >> arr[i]) || arr[i] < 0 || arr[i] > 1000)
             {
-                cout << "Invalid! Please enter a number between 0 and 1000: ";
-                cin >> arr[i];
+                cout << "Invalid! Enter a number between 0 and 1000: ";
+                cin.clear();
+                cin.ignore(1000, '\n');
             }
-                originalArr[i] = arr[i]; 
+            originalArr[i] = arr[i];
         }
         int lowvalue = 0;
         int highvalue = size - 1;
