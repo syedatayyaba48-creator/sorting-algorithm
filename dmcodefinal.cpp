@@ -201,7 +201,7 @@ int main ()
         {
             while (!(cin >> arr[i]) || arr[i] < 0 || arr[i] > 1000)
             {
-                cout << "Invalid! Enter a number between 0 and 1000: ";
+                cout << "Invalid! \nEnter a number between 0 and 1000: ";
                 cin.clear();
                 cin.ignore(1000, '\n');
             }
