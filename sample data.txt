@@ -1,0 +1,54 @@
+Sample Test Data
+This file contains various test cases you can use to test the sorting algorithms program.
+Test Case 1: Small Random Array
+Size: 5
+Elements: 64 34 25 12 22
+Test Case 2: Already Sorted Array
+Size: 6
+Elements: 10 20 30 40 50 60
+Purpose: Tests best-case scenarios for algorithms like Bubble Sort and Insertion Sort.
+Test Case 3: Reverse Sorted Array
+Size: 6
+Elements: 60 50 40 30 20 10
+Purpose: Tests worst-case scenarios for O(n²) algorithms.
+Test Case 4: Array with Duplicates
+Size: 8
+Elements: 45 23 45 67 23 89 45 12
+Purpose: Tests stability and handling of duplicate values.
+Test Case 5: Single Element
+Size: 1
+Elements: 42
+Purpose: Tests edge case with minimal input.
+Test Case 6: Two Elements
+Size: 2
+Elements: 99 1
+Purpose: Tests minimal comparison case.
+Test Case 7: All Same Elements
+Size: 7
+Elements: 50 50 50 50 50 50 50
+Purpose: Tests edge case where no sorting is needed.
+Test Case 8: Medium Random Array
+Size: 10
+Elements: 170 45 75 90 802 24 2 66 120 350
+Purpose: Good size to see performance differences between algorithms.
+Test Case 9: Larger Array
+Size: 15
+Elements: 234 567 123 890 345 678 901 456 789 234 567 123 890 345 678
+Purpose: Tests performance with larger datasets to see clear timing differences.
+Test Case 10: Nearly Sorted Array
+Size: 8
+Elements: 10 20 30 25 40 50 60 70
+Purpose: Tests adaptive algorithms (one element out of place).
+
+How to Use
+
+Run the program
+Copy the "Size" value when prompted
+Copy and paste the "Elements" values when prompted for array elements
+Select different algorithms to compare performance on the same data
+
+Notes
+
+All elements are within the valid range (0-1000)
+Larger arrays will show more dramatic performance differences
+For arrays smaller than 10 elements, timing differences may be negligible
