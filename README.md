@@ -1,4 +1,5 @@
 Sorting Algorithms Visualizer
+
 A C++ program that implements and compares five sorting algorithms with step-by-step visualization.
 Features
 
@@ -48,7 +49,7 @@ Enter the elements of the array: 64 34 25 12 22
  5. QUICK SORT               
  6. EXIT                     
 
-Enter your choice: 1
+***Enter your choice: 1
 You selected BUBBLE SORT.
 step 1:
 22 34 25 12 64 
@@ -57,17 +58,17 @@ step 2:
 ...
 Total Time Taken: 6777000 nanoseconds
 Performance Comparison Table
-Upon exit, the program displays a summary table:
+Upon exit, the program displays a summary table:**
 -----------------------------------------
 Algorithm           Duration (nanoseconds)
-----------------------------------------
+----------------------------------------*
 Bubble Sort         6777000
 Selection Sort      2998000
 Insertion Sort      3003000
 Merge Sort          6008000
 Quick Sort          2506000
-----------------------------------------
-Input Constraints
+----------------------------------------*
+Input Constraints*
 
 Array size: Positive integer (max 100 elements)
 Array elements: Integers between 0 and 1000
