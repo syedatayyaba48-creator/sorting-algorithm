@@ -225,7 +225,6 @@ int main ()
             cout <<" 4. MERGE SORT               "<<endl;
             cout <<" 5. QUICK SORT               "<<endl;
             cout <<" 6. EXIT                     "<<endl;
-            cout << "Enter your choice: ";
             while (true) 
             {
                 cout << "Enter your choice: ";
