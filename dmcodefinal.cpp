@@ -224,7 +224,7 @@ int main ()
             cout <<" 3. INSERTION SORT           "<<endl;
             cout <<" 4. MERGE SORT               "<<endl;
             cout <<" 5. QUICK SORT               "<<endl;
-            cout <<" 6. EXIT                     "<<endl;
+            cout <<" 6. EXIT to see performance summary"<<endl;
             while (true) 
             {
                 cout << "Enter your choice: ";
