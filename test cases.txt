@@ -1,0 +1,341 @@
+Functional Test Cases
+
+    1. Basic Program Flow
+    Objective: Verify the program runs and displays menu correctly
+    Steps:
+
+    Compile and run the program
+    Enter array size: 5
+    Enter elements: 31415
+
+    Expected Result:
+
+    Menu displays with all 6 options
+    No crashes or errors
+
+    Status:  ✗ Fail (due to limit of input being from 0 to 1000)
+
+    2. Single Algorithm Execution
+    Objective: Verify one sorting algorithm executes successfully
+    Steps:
+
+    Enter size: 5
+    Enter elements: 64 34 25 12 22
+    Select option 1 (Bubble Sort)
+    Select option 6 (Exit)
+
+    Expected Result:
+
+    Array is sorted: 12 22 25 34 64
+    Time is displayed in nanoseconds
+    Summary table shows "Bubble Sort" with duration
+
+    Status: ✓ Pass 
+
+    3. Multiple Algorithm Comparison
+    Objective: Test multiple algorithms on same data
+    Steps:
+
+    Enter size: 8
+    Enter elements: 45 23 67 89 12 34 56 78
+    Select option 1 (Bubble Sort)
+    Select option 2 (Selection Sort)
+    Select option 3 (Insertion Sort)
+    Select option 6 (Exit)
+
+    Expected Result:
+
+    All three algorithms produce sorted array
+    Summary table shows all three algorithms with their respective times
+    Times are positive numbers
+
+    Status: ✓ Pass
+
+    4. Continue Option
+    Objective: Test program restart functionality
+    Steps:
+
+    Complete a full sorting cycle
+    When prompted "Do you want to continue? (y/n):", enter 'y'
+    Enter new array size and elements
+
+    Expected Result:
+
+    Program restarts and allows new array input
+    Previous results are cleared
+
+    Status: ✓ Pass 
+
+    5. Exit Program
+    Objective: Test clean exit from program
+    Steps:
+
+    Complete a sorting cycle
+    When prompted "Do you want to continue? (y/n):", enter 'n'
+
+    Expected Result:
+
+    Message "Program terminated." displays
+    Program exits cleanly
+
+    Status: ✓ Pass 
+
+Input Validation Test Cases
+
+    1. Invalid Array Size (Negative)
+    Objective: Verify rejection of negative array size
+    Steps:
+
+    When prompted for size, enter: -5
+
+    Expected Result:
+
+    Error message: "Invalid choice! Only numbers are allowed."
+    Re-prompt for valid size
+
+    Status: ✓ Pass
+
+    2.Invalid Array Size (Non-numeric)
+    Objective: Verify rejection of non-numeric size input
+    Steps:
+
+    When prompted for size, enter: abc
+
+    Expected Result:
+
+    Error message: "Invalid choice! Only numbers are allowed."
+    Re-prompt for valid input
+
+    Status: ✓ Pass 
+
+    3. Invalid Array Element (Negative)
+    Objective: Verify rejection of negative elements
+    Steps:
+
+    Enter size: 3
+    Enter elements: 10 -5 20
+
+    Expected Result:
+
+    Error message: "Invalid! Enter a number between 0 and 1000:"
+    Re-prompt for valid element
+
+    Status: ✓ Pass 
+
+    4. Invalid Array Element (Out of Range)
+    Objective: Verify rejection of elements > 1000
+    Steps:
+
+    Enter size: 3
+    Enter elements: 10 1500 20
+
+    Expected Result:
+
+    Error message: "Invalid! Enter a number between 0 and 1000:"
+    Re-prompt for valid element
+
+    Status: ✓ Pass 
+
+    5. Invalid Array Element (Non-numeric)
+    Objective: Verify rejection of non-numeric elements
+    Steps:
+
+    Enter size: 3
+    Enter elements: 10 xyz 20
+
+    Expected Result:
+
+    Error message: "Invalid! Enter a number between 0 and 1000:"
+    Re-prompt for valid element
+
+    Status: ✓ Pass 
+
+    6. Invalid Menu Choice
+    Objective: Verify rejection of invalid menu options
+    Steps:
+
+    Complete array input
+    At menu, enter: 9
+
+    Expected Result:
+
+    Error message: "Invalid choice! Please enter a number between 1 and 6."
+    Re-display menu
+
+    Status: ✓ Pass 
+
+    7. Non-numeric Menu Choice
+    Objective: Verify rejection of non-numeric menu input
+    Steps:
+
+    At menu, enter: abc
+
+    Expected Result:
+
+    Error message: "Invalid choice! Please enter a number between 1 and 6."
+    Re-prompt for choice
+
+    Status: ✓ Pass
+
+Algorithm Correctness Test Cases
+    1. Bubble Sort Correctness
+    Test Data: [64, 34, 25, 12, 22]
+    Expected Output: [12, 22, 25, 34, 64]
+    Status: ✓ Pass 
+
+    2. Selection Sort Correctness
+    Test Data: [64, 34, 25, 12, 22]
+    Expected Output: [12, 22, 25, 34, 64]
+    Status: ✓ Pass 
+
+    3. Insertion Sort Correctness
+    Test Data: [64, 34, 25, 12, 22]
+    Expected Output: [12, 22, 25, 34, 64]
+    Status: ✓ Pass 
+
+    4. Merge Sort Correctness
+    Test Data: [64, 34, 25, 12, 22]
+    Expected Output: [12, 22, 25, 34, 64]
+    Status: ✓ Pass 
+
+    5. Quick Sort Correctness
+    Test Data: [64, 34, 25, 12, 22]
+    Expected Output: [12, 22, 25, 34, 64]
+    Status: ✓ Pass 
+
+    6. All Algorithms - Already Sorted
+    Test Data: [10, 20, 30, 40, 50]
+    Expected Output: [10, 20, 30, 40, 50]
+    Test All Algorithms: Each should maintain the sorted order
+    Status: ✓ Pass 
+
+    7. All Algorithms - Reverse Sorted
+    Test Data: [50, 40, 30, 20, 10]
+    Expected Output: [10, 20, 30, 40, 50]
+    Test All Algorithms: Each should correctly sort
+    Status: ✓ Pass
+
+    8. All Algorithms - Duplicates
+    Test Data: [45, 23, 45, 67, 23]
+    Expected Output: [23, 23, 45, 45, 67]
+    Test All Algorithms: Duplicates should be handled correctly
+    Status: ✓ Pass 
+
+    9. All Algorithms - All Same
+    Test Data: [50, 50, 50, 50, 50]
+    Expected Output: [50, 50, 50, 50, 50]
+    Test All Algorithms: Should handle without errors
+    Status: ✓ Pass 
+
+Performance Test Cases
+    1. Small Array Performance
+    Objective: Compare algorithm performance on small arrays
+    Test Data: Size 5, Elements: [64, 34, 25, 12, 22]
+    Steps:
+
+    Run all 5 algorithms on the same data
+    Compare execution times
+
+    Expected Result:
+
+    All algorithms complete in < 100,000 nanoseconds
+    Times are reasonable and positive
+
+    Status: ✗ Fail
+
+    2. Medium Array Performance
+    Objective: Compare performance on medium arrays
+    Test Data: Size 15, Elements: [234, 567, 123, 890, 345, 678, 901, 456, 789, 234, 567, 123, 890, 345, 678]
+    Steps:
+
+    Run all 5 algorithms
+    Note timing differences
+
+    Expected Result: 
+
+    O(n log n) algorithms (Merge, Quick) faster than O(n²) algorithms (Bubble, Selection, Insertion)
+    Times increase compared to Test 1
+
+    Status: ✓ Pass 
+
+    3. Worst Case for Bubble Sort
+    Objective: Test bubble sort with reverse-sorted array
+    Test Data: Size 10, Elements: [100, 90, 80, 70, 60, 50, 40, 30, 20, 10]
+    Expected Result:
+
+    Bubble Sort takes maximum comparisons
+    Shows significantly longer execution time
+
+    Status: ✗ Fail
+
+    4. Best Case for Insertion Sort
+    Objective: Test insertion sort with nearly sorted array
+    Test Data: Size 8, Elements: [10, 20, 30, 25, 40, 50, 60, 70]
+    Expected Result:
+
+    Insertion Sort performs efficiently
+    May compete with or beat O(n log n) algorithms
+
+    Status: ✓ Pass 
+
+Edge Cases
+    1. Single Element Array
+    Test Data: Size 1, Elements: [42]
+    Expected Output: [42]
+    Test All Algorithms: Should handle without errors
+    Status: ✓ Pass 
+
+    2. Two Element Array (Unsorted)
+    Test Data: Size 2, Elements: [99, 1]
+    Expected Output: [1, 99]
+    Test All Algorithms: Should correctly sort
+    Status: ✓ Pass 
+
+    3. Two Element Array (Sorted)
+    Test Data: Size 2, Elements: [1, 99]
+    Expected Output: [1, 99]
+    Test All Algorithms: Should maintain order
+    Status: ✓ Pass
+
+    4. Maximum Valid Elements
+    Test Data: Size 10, All elements = 1000
+    Expected Output: All elements remain 1000
+    Status: ✓ Pass 
+
+    5. Minimum Valid Elements
+    Test Data: Size 10, All elements = 0
+    Expected Output: All elements remain 0
+    Status: ✓ Pass 
+
+    6. Large Array (Near Limit)
+    Test Data: Size 100, Random elements
+    Expected Result:
+
+    Program handles without overflow
+    All algorithms complete successfully
+
+    Status: ✓ Pass 
+
+
+Test Execution Checklist
+
+ All Functional Tests (1 to 5)
+ All Input Validation Tests (1 to 7)
+ All Algorithm Correctness Tests (1 to 9)
+ All Performance Tests (1 to 4)
+ All Edge Cases (1 to 6)
+
+Known Issues
+
+Array Size Limit: No validation prevents size > 100, which can cause buffer overflow
+Zero Size Array: Accepts size = 0, may cause undefined behavior
+Memory Management: Merge sort uses dynamic allocation but other arrays are static
+print is happening in sorting so it may give unexpected time for sorting
+
+
+Test Report Template
+
+Tester: Tayyaba Sohail
+Total Tests: 31
+Passed: 28
+Failed: 3
